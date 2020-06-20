@@ -13,11 +13,9 @@ More details can be inspected by [downloading the virtual machine](https://mcc.l
 # Files in the repo
 
 * `Benchkit_head.sh` normal entry point of the mcc : calls `its` then if there is a resulting file, calls `lola` versions of the script. 
-* `Benchkit_head.its.sh` Invoke its-tools, passing `-rebuildPNML` flag, and no flags corresponding to actual model-checking solutions (`-its,-ltsmin,-smt` all disabled). If successful this builds a pair of files with `.sr.` added to their name.
+* `Benchkit_head.its.sh` Invoke its-tools, passing `-rebuildPNML` flag, and no flags corresponding to actual model-checking solutions (`-its,-ltsmin,-smt` all disabled). If there remain properties to solve this builds a pair of files with `.sr.` added to their name.
 * `Benchkit_head.lola.sh` outside of the name, this is basically taken directly from lola distribution
 * `Makefile` : this is a core file of lola in the MCC contestant mode, that we edited slightly.
 * `install_XXX.sh` : grab the actual binaries for the tools
-
-
 
 This software is freely available under terms of GPL.

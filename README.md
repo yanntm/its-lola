@@ -8,6 +8,17 @@ Lola artifacts are taken from the 2019 submission to the Model-checking contest,
 
 ITS-Tools artifacts and scripts assembling the workflow were built by Yann Thierry-Mieg.
 
+# Model Checking Contest Awards
+
+This tool won the following awards at the [Model-Checking Contest 2020 edition](https://mcc.lip6.fr/) which it was built to compete in :
+
+ * LTL gold : ![Gold LTL](https://mcc.lip6.fr/certificates/2020/gold-LTL-2020.png)
+ * UpperBounds gold : ![Gold UpperBounds](https://mcc.lip6.fr/certificates/2020/gold-UpperBounds-2020.png)
+ * Reachability silver : ![Silver UpperBounds](https://mcc.lip6.fr/certificates/2020/silver-Reachability-2020.png)
+ * CTL silver : ![Silver CTL](https://mcc.lip6.fr/certificates/2020/silver-CTL-2020.png)
+
+It also got the first place (gold ?) in the [Deadlock Detection](https://mcc.lip6.fr/index.php?CONTENT=results/ReachabilityDeadlock.html&TITLE=Results%20for%20ReachabilityDeadlock) category, though in 2020 this category was merged into "GlobalProperties" (for the first time) so there is no related medal.
+ 
 # Usage
 
 As this tool conforms to the Model-Checking contest rules, please see the [MCC instructions]https://mcc.lip6.fr/pdf/MCC2020-SubmissionManual.pdf to see how these `BenchKit_head.sh` scripts are meant to be invoked, and what is expected outputs from the tool in terms of verdict reporting.

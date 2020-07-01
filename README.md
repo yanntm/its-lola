@@ -10,7 +10,7 @@ ITS-Tools artifacts and scripts assembling the workflow were built by Yann Thier
 
 # Model Checking Contest Awards
 
-This tool won the following awards at the [Model-Checking Contest 2020 edition](https://mcc.lip6.fr/) which it was built to compete in :
+This tool  won the following awards at the [Model-Checking Contest 2020 edition](https://mcc.lip6.fr/) which it was built to compete in :
 
  * LTL gold : ![Gold LTL](http://mcc.lip6.fr/certificates/2020/gold-LTL-2020.png)
  * UpperBounds gold : ![Gold UpperBounds](https://mcc.lip6.fr/certificates/2020/gold-UpperBounds-2020.png)

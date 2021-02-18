@@ -33,7 +33,7 @@ else ifneq "$(findstring $(BK_EXAMINATION),$(DONOTCOMPETE))" ""
 else ifeq ($(BK_EXAMINATION),CTLCardinality)
 	@-for xml in $(wildcard *$(BK_EXAMINATION).xml); do \
 	    touch $${xml%.xml}.result ; \
-		$(BINDIR)/lola/src/lola --pnmlnet model.pnml \
+		$(BINDIR)/lola --pnmlnet model.pnml \
 		--xmlformula --formula=$$xml --mcc \
 	 	--donotcomputecapacities --encoder=simplecompressed $(SAFE_OPTION) \
 		--check=modelchecking --stubborn=tarjan \
@@ -46,7 +46,7 @@ else ifeq ($(BK_EXAMINATION),CTLCardinality)
 else ifeq ($(BK_EXAMINATION),CTLFireability)
 	@-for xml in $(wildcard *$(BK_EXAMINATION).xml); do \
 	    touch $${xml%.xml}.result ; \
-		$(BINDIR)/lola/src/lola --pnmlnet model.pnml \
+		$(BINDIR)/lola --pnmlnet model.pnml \
 		--xmlformula --formula=$$xml --mcc \
 	 	--donotcomputecapacities --encoder=simplecompressed $(SAFE_OPTION) \
 		--check=modelchecking --stubborn=tarjan \
@@ -61,7 +61,7 @@ else ifeq ($(BK_EXAMINATION),CTLFireability)
 else ifeq ($(BK_EXAMINATION),ReachabilityDeadlock)
 	@-for xml in $(wildcard *$(BK_EXAMINATION).xml); do \
 	    touch $${xml%.xml}.result ; \
-		$(BINDIR)/lola/src/lola --pnmlnet model.pnml \
+		$(BINDIR)/lola --pnmlnet model.pnml \
 		--xmlformula --formula=$$xml --mcc \
 	 	--donotcomputecapacities --encoder=simplecompressed $(SAFE_OPTION) \
 		--check=modelchecking --stubborn=combined \
@@ -76,7 +76,7 @@ else ifeq ($(BK_EXAMINATION),ReachabilityDeadlock)
 else ifeq ($(BK_EXAMINATION),LTLCardinality)
 	@-for xml in $(wildcard *$(BK_EXAMINATION).xml); do \
 	    touch $${xml%.xml}.result ; \
-		$(BINDIR)/lola/src/lola --pnmlnet model.pnml \
+		$(BINDIR)/lola --pnmlnet model.pnml \
 		--xmlformula --formula=$$xml --mcc \
 	 	--donotcomputecapacities --encoder=simplecompressed $(SAFE_OPTION) \
 		--check=modelchecking --stubborn=deletion \
@@ -89,7 +89,7 @@ else ifeq ($(BK_EXAMINATION),LTLCardinality)
 else ifeq ($(BK_EXAMINATION),LTLFireability)
 	@-for xml in $(wildcard *$(BK_EXAMINATION).xml); do \
 	    touch $${xml%.xml}.result ; \
-		$(BINDIR)/lola/src/lola --pnmlnet model.pnml \
+		$(BINDIR)/lola --pnmlnet model.pnml \
 		--xmlformula --formula=$$xml --mcc \
 	 	--donotcomputecapacities --encoder=simplecompressed $(SAFE_OPTION) \
 		--check=modelchecking --stubborn=deletion \
@@ -104,7 +104,7 @@ else ifeq ($(BK_EXAMINATION),LTLFireability)
 else ifeq ($(BK_EXAMINATION),ReachabilityCardinality)
 	@-for xml in $(wildcard *$(BK_EXAMINATION).xml); do \
 	    touch $${xml%.xml}.result ; \
-		$(BINDIR)/lola/src/lola --pnmlnet model.pnml \
+		$(BINDIR)/lola --pnmlnet model.pnml \
 		--xmlformula --formula=$$xml --mcc \
 	 	--donotcomputecapacities --encoder=simplecompressed $(SAFE_OPTION) \
 		--check=modelchecking --stubborn=tarjan \
@@ -116,7 +116,7 @@ else ifeq ($(BK_EXAMINATION),ReachabilityCardinality)
 else ifeq ($(BK_EXAMINATION),ReachabilityFireability)
 	@-for xml in $(wildcard *$(BK_EXAMINATION).xml); do \
 	    touch $${xml%.xml}.result ; \
-		$(BINDIR)/lola/src/lola --pnmlnet model.pnml \
+		$(BINDIR)/lola --pnmlnet model.pnml \
 		--xmlformula --formula=$$xml --mcc \
 	 	--donotcomputecapacities --encoder=simplecompressed $(SAFE_OPTION) \
 		--check=modelchecking --stubborn=tarjan \
@@ -130,7 +130,7 @@ else ifeq ($(BK_EXAMINATION),ReachabilityFireability)
 else ifeq ($(BK_EXAMINATION),UpperBounds)
 	@-for xml in $(wildcard *$(BK_EXAMINATION).xml); do \
 	    touch $${xml%.xml}.result ; \
-		$(BINDIR)/lola/src/lola --pnmlnet model.pnml \
+		$(BINDIR)/lola --pnmlnet model.pnml \
 		--xmlformula --formula=$$xml --mcc \
 	 	--donotcomputecapacities --encoder=simplecompressed $(SAFE_OPTION) \
 		--check=modelchecking --stubborn=tarjan \

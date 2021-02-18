@@ -31,6 +31,26 @@ Finally invoke `BenchKit_head.sh` script.
 
 More details can be inspected by [downloading the virtual machine](https://mcc.lip6.fr/2020/results.php) corresponding to this submission, only the major scripts and elements that are edited with respect to their ITS-tools or Lola sources are maintained in this repo. In other words we expect both its-tools and Lola to be present and functional already.
 
+# Testing
+
+This tool being compliant to MCC can be tested using our MCC testing framework https://github.com/yanntm/pnmcc-tests :
+
+Set it up like this :
+```
+git clone https://github.com/yanntm/its-lola.git
+cd its-lola
+./install_all.sh
+git clone https://github.com/yanntm/pnmcc-tests.git
+cp pnmcc-tests/* .
+./install_oracle.sh
+```
+
+Then for any test in `oracle/` you can run :
+```
+./run_test.pl oracle/Angiogenesis-PT-05-LTLF.out
+``` 
+
+
 # Files in the repo
 
 * `Benchkit_head.sh` normal entry point of the mcc : calls `its` then if there is a resulting file, calls `lola` versions of the script. 

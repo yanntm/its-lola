@@ -18,7 +18,7 @@ jobs:
     - name: Install ITS and build Lola 
       run: ./install_all.sh
     - name: Grab test framework
-      run: git clone https://github.com/yanntm/pnmcc-tests.git ; cp pnmcc-tests/* . ; ./install_oracle.sh
+      run: git clone https://github.com/yanntm/pnmcc-tests.git ; cp -r pnmcc-tests/* . ; ./install_oracle.sh
     - name: make a test
       run: ./run_test.pl oracle/Angiogenesis-PT-05-LTLF.out
 

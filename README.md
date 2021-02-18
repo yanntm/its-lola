@@ -4,7 +4,7 @@ Crossover Petri net verifier using [its-tools](http://ddd.lip6.fr) newly introdu
 
 This repository hosts artifacts that allowed to build the "its-lola" submission to the [Model-Checking Contest 2020 edition](https://mcc.lip6.fr/). This tool can handle the Reachability, Deadlock, Upper bounds, CTL and LTL examinations of the contest. 
 
-Lola artifacts are taken from the 2019 submission to the Model-checking contest, as extracted from the submission of Karsten Wolf and Torsten Liebke.
+Lola artifacts are taken from the 2019 submission to the Model-checking contest, as extracted from the submission of Karsten Wolf and Torsten Liebke from Rostock University in Germany.
 
 ITS-Tools artifacts and scripts assembling the workflow were built by Yann Thierry-Mieg.
 
@@ -17,13 +17,15 @@ This tool  won the following awards at the [Model-Checking Contest 2020 edition]
  * Reachability silver : <img src="http://mcc.lip6.fr/certificates/2020/silver-Reachability-2020.png" alt="Silver Reachability" width="50px" height="50px">
  * CTL silver : <img src="http://mcc.lip6.fr/certificates/2020/silver-Reachability-2020.png" alt="Silver Reachability" width="50px" height="50px">
 
-It also got the first place (gold ?) in the [Deadlock Detection](https://mcc.lip6.fr/index.php?CONTENT=results/ReachabilityDeadlock.html&TITLE=Results%20for%20ReachabilityDeadlock) category, though in 2020 this category was merged into "GlobalProperties" (for the first time) so there is no related medal.
+It also got the first place (gold ?) in the [Deadlock Detection](https://mcc.lip6.fr/2020/index.php?CONTENT=results/ReachabilityDeadlock.html&TITLE=Results%20for%20ReachabilityDeadlock) category, though in 2020 this category was merged into "GlobalProperties" (for the first time) so there is no related medal.
  
 # Usage
 
 As this tool conforms to the Model-Checking contest rules, please see the [MCC instructions](https://mcc.lip6.fr/pdf/MCC2020-SubmissionManual.pdf) to see how these `BenchKit_head.sh` scripts are meant to be invoked, and what is expected outputs from the tool in terms of verdict reporting.
 
-Basically you need : a `model.pnml` Petri net and an `Examination.xml` property file in the current working directory.
+To install, simply clone this repository and run `install_all.sh` script. This build is Linux specific as these are the conditions in the contest.
+
+To analyze a model you need : a `model.pnml` Petri net and an `Examination.xml` property file in the current working directory.
 
 Then define the environment variables `BK EXAMINATION` (to one of `ReachabilityDeadlock,UpperBounds,ReachabilityCardinality,ReachabilityFireability,LTLFireability,LTLCardinality,CTLFireability,CTLCardinality`) and `BK TIME CONFINEMENT` (in seconds).
 
@@ -31,7 +33,7 @@ If you are not running in the default MCC path `/home/mcc/BenchKit`, also define
 
 Finally invoke `BenchKit_head.sh` script.
 
-More details could be inspected by [downloading the virtual machine](https://mcc.lip6.fr/2020/results.php) corresponding to this submission, only the major scripts and elements that are edited with respect to their ITS-tools or Lola sources are maintained in this repo. In other words we expect both its-tools and Lola to be present and functional already.
+More details could be inspected by [downloading the virtual machine](https://mcc.lip6.fr/2020/results.php) corresponding to this submission, only the major scripts and elements that are edited with respect to their ITS-tools or Lola sources are maintained in this repo. 
 
 # Testing
 

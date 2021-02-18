@@ -21,15 +21,17 @@ It also got the first place (gold ?) in the [Deadlock Detection](https://mcc.lip
  
 # Usage
 
-As this tool conforms to the Model-Checking contest rules, please see the [MCC instructions]https://mcc.lip6.fr/pdf/MCC2020-SubmissionManual.pdf to see how these `BenchKit_head.sh` scripts are meant to be invoked, and what is expected outputs from the tool in terms of verdict reporting.
+As this tool conforms to the Model-Checking contest rules, please see the [MCC instructions](https://mcc.lip6.fr/pdf/MCC2020-SubmissionManual.pdf) to see how these `BenchKit_head.sh` scripts are meant to be invoked, and what is expected outputs from the tool in terms of verdict reporting.
 
 Basically you need : a `model.pnml` Petri net and an `Examination.xml` property file in the current working directory.
 
 Then define the environment variables `BK EXAMINATION` (to one of `ReachabilityDeadlock,UpperBounds,ReachabilityCardinality,ReachabilityFireability,LTLFireability,LTLCardinality,CTLFireability,CTLCardinality`) and `BK TIME CONFINEMENT` (in seconds).
 
+If you are not running in the default MCC path `/home/mcc/BenchKit`, also define `BK_BIN_PATH` to the installation folder where you ran `./install_all.sh`.
+
 Finally invoke `BenchKit_head.sh` script.
 
-More details can be inspected by [downloading the virtual machine](https://mcc.lip6.fr/2020/results.php) corresponding to this submission, only the major scripts and elements that are edited with respect to their ITS-tools or Lola sources are maintained in this repo. In other words we expect both its-tools and Lola to be present and functional already.
+More details could be inspected by [downloading the virtual machine](https://mcc.lip6.fr/2020/results.php) corresponding to this submission, only the major scripts and elements that are edited with respect to their ITS-tools or Lola sources are maintained in this repo. In other words we expect both its-tools and Lola to be present and functional already.
 
 # Testing
 
@@ -41,7 +43,7 @@ git clone https://github.com/yanntm/its-lola.git
 cd its-lola
 ./install_all.sh
 git clone https://github.com/yanntm/pnmcc-tests.git
-cp pnmcc-tests/* .
+cp -r pnmcc-tests/* .
 ./install_oracle.sh
 ```
 
@@ -50,6 +52,7 @@ Then for any test in `oracle/` you can run :
 ./run_test.pl oracle/Angiogenesis-PT-05-LTLF.out
 ``` 
 
+To ensure the build is reproducible there is a Github Actions attached to this repository that runs this exact test, see https://github.com/yanntm/its-lola/actions for some logs of it running.
 
 # Files in the repo
 
@@ -57,6 +60,9 @@ Then for any test in `oracle/` you can run :
 * `Benchkit_head.its.sh` Invoke its-tools, passing `-rebuildPNML` flag, and no flags corresponding to actual model-checking solutions (`-its,-ltsmin,-smt` all disabled). If there remain properties to solve this builds a pair of files with `.sr.` added to their name.
 * `Benchkit_head.lola.sh` outside of the name, this is basically taken directly from lola distribution
 * `Makefile` : this is a core file of lola in the MCC contestant mode, that we edited slightly.
-* `install_XXX.sh` : To install the tool dependencies, run the `install` shell scripts, but this step is not yet fully automated for lola component.
+* `install_XXX.sh` : To install the tool and its dependencies, run the `install_all.sh` that calls all the other install shell scripts. You need a C compiler and might also need autotools. 
 
-This software is freely available under terms of GPL.
+### Acknowledgements
+
+Yann Thierry-Mieg, LIP6, Sorbonne Université, CNRS.
+This software is freely available under the terms of GPL v3, see License file.

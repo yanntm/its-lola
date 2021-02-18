@@ -22,4 +22,6 @@ then
 	cp model.sr.pnml model.pnml
 	cp $BK_EXAMINATION.sr.xml $BK_EXAMINATION.xml
 	bash $BK_BIN_PATH/BenchKit_head.lola.sh
+	cp model.ori.pnml model.pnml
+	cp $BK_EXAMINATION.ori.xml $BK_EXAMINATION.xml
 fi

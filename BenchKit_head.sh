@@ -12,7 +12,7 @@
 
 set -x
 
-bash /home/mcc/BenchKit/BenchKit_head.its.sh
+bash $BK_BIN_PATH/BenchKit_head.its.sh
 
 if [ -f model.sr.pnml ] 
 then
@@ -21,5 +21,5 @@ then
 	cp $BK_EXAMINATION.xml $BK_EXAMINATION.ori.xml
 	cp model.sr.pnml model.pnml
 	cp $BK_EXAMINATION.sr.xml $BK_EXAMINATION.xml
-	bash /home/mcc/BenchKit/BenchKit_head.lola.sh
+	bash $BK_BIN_PATH/BenchKit_head.lola.sh
 fi

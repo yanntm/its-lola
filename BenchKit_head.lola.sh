@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH=$PATH:$BK_BIN_PATH/usr/local/bin
+
 # get beginning time
 startPreparationTime=$(date +%s);
 TIME_CONFINEMENT=$BK_TIME_CONFINEMENT
@@ -8,8 +10,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     cp $BK_MCC_PATH/Makefile .
     export BIN_DIR="/Users/dorschden/Documents/modellchecking/mcc/vm/bin"
 else
-    cp /home/mcc/BenchKit/Makefile .
-    export BIN_DIR="/home/mcc/BenchKit/bin"
+    cp $BK_BIN_PATH/Makefile .
+    export BIN_DIR="$BK_BIN_PATH/usr/local/bin"
 fi
 
 # threshold value to detect small time confinements (e.g. qualification phase)

@@ -15,7 +15,7 @@ This tool  won the following awards at the [Model-Checking Contest 2020 edition]
  * LTL gold : <img src="http://mcc.lip6.fr/certificates/2020/gold-LTL-2020.png" alt="Gold LTL" width="50px" height="50px">
  * UpperBounds gold : <img src="http://mcc.lip6.fr/certificates/2020/gold-UpperBounds-2020.png" alt="Gold UpperBounds" width="50px" height="50px">
  * Reachability silver : <img src="http://mcc.lip6.fr/certificates/2020/silver-Reachability-2020.png" alt="Silver Reachability" width="50px" height="50px">
- * CTL silver : <img src="http://mcc.lip6.fr/certificates/2020/silver-Reachability-2020.png" alt="Silver Reachability" width="50px" height="50px">
+ * CTL silver : <img src="http://mcc.lip6.fr/certificates/2020/silver-CTL-2020.png" alt="Silver Reachability" width="50px" height="50px">
 
 It also got the first place (gold ?) in the [Deadlock Detection](https://mcc.lip6.fr/2020/index.php?CONTENT=results/ReachabilityDeadlock.html&TITLE=Results%20for%20ReachabilityDeadlock) category, though in 2020 this category was merged into "GlobalProperties" (for the first time) so there is no related medal.
  

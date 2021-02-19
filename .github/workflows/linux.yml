@@ -21,9 +21,7 @@ jobs:
       run: git clone https://github.com/yanntm/pnmcc-tests.git ; cp -r pnmcc-tests/* . ; ./install_oracle.sh
     - name: make a test
       run: ./run_test.pl oracle/Angiogenesis-PT-05-LTLF.out
-    - name: make all tests on Angio
-      run: for i in oracle/Angiogenesis-PT-05-*.out ; do ./run_test.pl $i ; done ;
-    - name: some colored tests
-      run: for i in oracle/AirplaneLD-COL-0020-*.out ; do ./run_test.pl $i ; done ;
+    - name: a colored test
+      run: ./run_test.pl oracle/AirplaneLD-COL-0020-RF.out 
 
       
